@@ -21,3 +21,24 @@ class Deck:
     def deal(self):
         return self.cards.pop() if self.cards else None
 
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.hand = []
+
+    def add_card(self, card):
+        self.hand.append(card)
+
+    def play_card(self):
+        return self.hand.pop(0) if self.hand else None
+
+class Game:
+    def __init__(self):
+        self.deck = Deck()
+        self.players = [Player("Player 1"), Player("Player 2")]
+
+    def start_game(self):
+        # Game initialization logic
+        pass
+
+    # Additional game logic methods...
